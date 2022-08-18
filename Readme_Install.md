@@ -56,6 +56,11 @@ El archivo PySpatialDSSAT contiene un script para Python3. Luego de descomprimir
 
 o con una herramienta gráfica como el "Explorador de Windows".
 
+Para más información, ver
+
+[DSSAT.net](https://dssat.net/) y [dssat-csm-os](https://github.com/DSSAT/dssat-csm-os).
+
+
 ### Ejecución
 
 Para ejecutar el script PySpatialDSSAT debemos hacerlo desde el ambiente creado previamente. Es decir, debemos estar desde una terminal de Miniconda3 y tener el ambiente pygdal39 activado como vimos en las secciones anteriores. Típicamente, deberemos cambiar al directorio correspondiente
