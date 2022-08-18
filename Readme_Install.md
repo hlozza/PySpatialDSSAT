@@ -84,32 +84,42 @@ DSCSM047.EXE B DSSBatch.v47
 
 La carpeta CSM no es un lugar adecuado para correr DSSAT dado que tiene los archivos de referencia y necesita ediciones adicionales. Por ejemplo, el archivo exerimental tiene un suelo indefinido *SOIL_CODE*. 
  
- 
+
  ## GNU/Linux
 
 Aqui el comando `python` hace referencia a `python3`. Primero creo el ambiente virtual. Lo activo, actualizo los paquetes e instalo otros requerimientos como GDAL.
 
 *.Creo el venv
+
     mkdir SD-venv
     python -m venv SD-venv/
     cd SD-venv/
+
 *.Activo el ambiente y actualizo versiones
+
     source bin/activate
     python -m pip install --upgrade pip
     python -m pip install --upgrade wheel
     python -m pip install --upgrade setuptools
+
 *.Instalo requerimientos. Chequeo versión de GDAL para instalar un paquete compatible con los headers
+
     gdalinfo --version
     python -m pip install configparser
     python -m pip install numpy
     python3 -m pip install gdal==3.4 --no-cache-dir
+
 *.Copio el script y lo ejecuto
+
     cd SD-venv/
     cp -ir ../PySpatialDSSAT/ ./
     cd PySpatialDSSAT/
     python main.py
+
 *.Fianlizo
+
     deactivate
+
 
 ### Ejecución
 
